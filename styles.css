@@ -1,0 +1,45 @@
+.dogpic {
+    max-width: 400px;
+    max-height: 400px;
+    text-align: center;
+}
+
+.subBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subBreed {
+    margin-right: 25px;
+}
+
+#directions {
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+.dogForm {
+    text-align: center;
+    display: inline-block;
+}
+
+.singleForm {
+    margin-inline: 20px;
+}
+
+#title {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.buttonLine {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
