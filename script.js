@@ -1,20 +1,31 @@
 document.getElementById("breedSubmit").addEventListener("click", function(event) {
     event.preventDefault();
     const value = document.getElementById("breedInput").value;
+    const subValue = document.getElementById("subInput").value;
     if (value === "") {
-      const url = "https://dog.ceo/api/breeds/image/random";
-      fetch(url)
-      .then(function(response) {
-          return response.json();
-      }).then(function(json) {
-          let results = "";
-          if (json.status === "error") {
-            results += json.message
-          }
-          else {
-            results += '<img class="dogpic" src="' + json.message + '"/>';
-            
+        if (subValue != "") {
+            let results = "";
+            let breedList = "";
+            results += "Enter a base breed";
+            document.getElementById("breedResults").innerHTML = breedList;
+            document.getElementById("photoResults").innerHTML = results;
+            return;
         }
+        const url = "https://dog.ceo/api/breeds/image/random";
+        fetch(url)
+        .then(function(response) {
+            return response.json();
+        }).then(function(json) {
+            let results = "";
+            let breedList = "";
+            if (json.status === "error") {
+                results += json.message
+            }
+            else {
+                results += '<img class="dogpic" src="' + json.message + '"/>';
+                
+            }
+        document.getElementById("breedResults").innerHTML = breedList;
         document.getElementById("photoResults").innerHTML = results;
         console.log(json);
       });
@@ -41,7 +52,6 @@ document.getElementById("breedSubmit").addEventListener("click", function(event)
             }
             document.getElementById("breedResults").innerHTML = breedList;
             console.log(json);
-            const subValue = document.getElementById("subInput").value;
             if (subValue === "") {
                 const url2 = "https://dog.ceo/api/breed/" + value + "/images/random";
                 fetch(url2)

@@ -1,6 +1,7 @@
 .dogpic {
     max-width: 400px;
     max-height: 400px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
@@ -24,6 +25,7 @@
 }
 
 .dogForm {
+    margin-top: 25px;
     text-align: center;
     display: inline-block;
 }
@@ -33,8 +35,18 @@
 }
 
 #title {
-    margin-top: 15px;
+    padding-top: 20px;
     margin-bottom: 30px;
+    color: #f9f7f0;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.titleBlock {
+    background-color: #8d683f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .buttonLine {
@@ -42,4 +54,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.footer {
+    position: relative;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: #bc8c5a;
+    text-align: center;
+    color: #f9f7f0;
+}
+
+body {
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/464/025/small/dog_and_cat_pattern-20.jpg");
+    background-repeat: repeat;
+}
+
+.container {
+    background-color: #ccccc3;
+    min-height: 700px;
+}
+
+.pawprint {
+    height: 65px;
+}
+
+#breedSubmit {
+    background-color: #bc8c5a;
 }
